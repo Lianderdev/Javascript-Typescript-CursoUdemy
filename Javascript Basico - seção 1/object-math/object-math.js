@@ -17,7 +17,7 @@ console.log(`round = ${num3}`)
 console.log('max-maior = ',Math.max(1,2,3,4,5,6,7,8,9,-10))
 
 // Min => pega o menor número de uma sequencia de números
-console.log('max-maior = ',Math.min(1,2,3,4,5,6,7,8,9,-10))
+console.log('max-menor = ',Math.min(1,2,3,4,5,6,7,8,9,-10))
 
 // Randon => gera uma numero aleatorio
 console.log('aleatoiro-random = ', Math.round(Math.random() * (10 - 5) + 5))

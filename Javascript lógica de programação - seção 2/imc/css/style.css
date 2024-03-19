@@ -78,12 +78,25 @@ button:hover{
     color: white;
 }
 
-.resultado-imc { 
-    width: 300px;
+
+
+.paragrafo-resultado{
+    background-color: green;
+    width: 350px;
     height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
+    line-height: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.paragrafo-resultado-vermelho{
+    background-color: red;
+    width: 350px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
     font-size: 15px;
     font-weight: bold;
     text-transform: uppercase;

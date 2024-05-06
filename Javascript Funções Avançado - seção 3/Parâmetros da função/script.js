@@ -25,3 +25,42 @@ function soma (a, b = 5) { // (b = 5) <- aqui estou definindo um valor padrão c
 }
 
 soma(2, 2)
+
+
+function desestruturaçãoObj ({nome, sobrenome}) {
+    console.log(nome, sobrenome)
+}
+
+const obj = {nome: 'liander', sobrenome: 'Souza'} 
+desestruturaçãoObj(obj)
+
+
+
+function desestruturaçãoArray([valor1, valor2]) {
+    console.log(valor1, valor2)
+}
+
+const arr = ['Janeiro', 'Fevereiro..']
+desestruturaçãoArray(arr)
+
+
+//Rest Operator ira pegar os ultimos argumentos que n estão nos parametros
+
+const somaF = function(operador, acumulador, ...numeros) {
+
+    for (let numero of numeros) {
+        if (operador === '+') acumulador += numero
+        if (operador === '-') acumulador -= numero
+        if (operador === '/') acumulador /= numero
+        if (operador === '*') acumulador *= numero
+    }
+    console.log(acumulador)
+};
+
+somaF('*', 1, 1, 2, 3, 4, 5)
+
+const exemploRest = (...args) => {
+    console.log(args)
+}
+
+exemploRest('tra', 'la', 'la')

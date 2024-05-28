@@ -20,3 +20,14 @@ function CriarObjetos (nome, sobrenome, idade){
 }
 let pessoa1 = CriarObjetos('liander', 'vincius', 19)
 console.log(pessoa1.nome, pessoa1.sobrenome)
+
+const person = {
+    nome: 'Liander',
+    sobrenome: 'Souza',
+    falanome: function() {
+        return `${this.nome} ${this.sobrenome}`
+    }
+}
+
+const fala = person.falanome()
+console.log(fala)

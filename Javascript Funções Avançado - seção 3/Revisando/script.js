@@ -31,3 +31,23 @@ const ColocaElemento = () => {
     let div = CriaElemento()
     section.append(div)
 }
+
+
+const criaObjeto = (nome, sobrenome) => {
+    const obj = {
+        nome: nome,
+        sobrenome: sobrenome
+    }
+
+    return obj
+}
+
+const obj = criaObjeto('liander', 'souza')
+console.log(obj)
+
+
+const criaArr = (el) => {
+    for (let i = 0; i < 5; i++) {
+        
+    }
+}

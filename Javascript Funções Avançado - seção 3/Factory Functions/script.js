@@ -3,7 +3,7 @@
 //Obs: functions dentro de objetos são chamadas de metodos
 //ex: Simples
 
-/*
+
 const criaObjeto = (nome, sobrenome, peso, altura) => {
     return {
         nome, 
@@ -34,7 +34,7 @@ const criaObjeto = (nome, sobrenome, peso, altura) => {
 
 const obj = criaObjeto('liander', 'souza', 75, 1.73)
 obj.nomeCompleto = 'Veronica Matias Costa'
-console.log(obj.nomeCompleto) */
+console.log(obj.nomeCompleto)
 
 const obj2 = {
     lista: ['jogo', 'futebol', 'namorada'],

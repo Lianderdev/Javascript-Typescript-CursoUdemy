@@ -7,13 +7,14 @@
 // retorne os números maiores que 10 
 const numeros = [4, 12, 6, 13, 4, 67, 2, 13];
 
-function callbackFilter(valor, indice, array) {
-    console.log(`${valor} | ${indice}`)
+function callbackFilter(valor, indice) {
     return valor > 10
 }
 
 const numerosFiltrados = numeros.filter(callbackFilter)
 console.log(numerosFiltrados)
+
+console.log(numeros)
 
 const numerosFiltrados2 = numeros.filter((valor) => {
     return valor < 10

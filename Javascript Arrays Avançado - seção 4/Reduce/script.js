@@ -21,15 +21,16 @@ const pessoas = [
     idade: 19},
 
     {nome: 'lilia', 
-    idade: 48},
+    idade: 43},
 
     {nome: 'anderson', 
     idade: 45},
 ]
 
 const maisVelha = pessoas.reduce((acumulador, valor) => {
-     if (acumulador.idade > valor.idade) return acumulador
-     return valor
+    if (acumulador.idade > valor.idade) return acumulador
+    return valor 
 })
 
 console.log(maisVelha)
+console.log(pessoas)

@@ -9,7 +9,7 @@ const numerosBent = numeros.map(number => {
     return number * 2
 })
 console.log(numerosBent)
-
+console.log(numeros)
 //Para cada elemento:
 //retorne apenas uma string com o nome da pessoa
 //Remova apenas a chave nome do objeto

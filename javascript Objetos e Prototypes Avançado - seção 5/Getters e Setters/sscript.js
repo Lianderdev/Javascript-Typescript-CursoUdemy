@@ -25,3 +25,19 @@ p1.setName('anderson')
 console.log(p1.getName())
 console.log(p1.getAge())
 console.log(p1)
+
+
+const lista = {
+    listaString: ['liander'],
+    get getPrimeraString() {
+        return this.listaString.length ? this.listaString[0] : null
+    },
+
+    set setPrimeriraString(item) {
+        this.listaString.unshift(item)
+    }
+} 
+
+console.log(lista.getPrimeraString)
+lista.setPrimeriraString = 'olá'
+console.log(lista.getPrimeraString)

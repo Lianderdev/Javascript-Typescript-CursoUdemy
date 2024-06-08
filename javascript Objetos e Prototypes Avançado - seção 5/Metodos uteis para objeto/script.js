@@ -25,3 +25,6 @@ console.log(pessoa3)
 
 //ver as chabes do objeto
 console.log(Object.keys(pessoa3))
+
+//ver valores do objeto
+console.log(Object.values(pessoa2))

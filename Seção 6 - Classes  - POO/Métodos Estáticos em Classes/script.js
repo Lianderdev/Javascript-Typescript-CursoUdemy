@@ -1,24 +1,36 @@
 //Métodos Estáticos 
 //São chamdos diretamente nas funções 
 //precisam da palavra chave (static) antes da declacao do método
-class Ponto {
-    constructor(x, y) {
-      this.x = x;
-      this.y = y;
-    }
-  
-    static distancia(a, b) {
-      const dx = a.x - b.x;
-      const dy = a.y - b.y;
-  
-      return Math.hypot(dx, dy);
-    }
+//Esses metodos n tem acesso as dados da instacia
+
+const valorAumentado = (min = 0, max = 100) => {
+  const valor = Math.random() * (0 + 100) - 0
+  return Math.floor(valor)
+}
+
+class ControleRemoto {
+  constructor(nome) {
+    this.nome = nome
+    this.aumentarVolume = 0
   }
-  
-  const p1 = new Ponto(5, 5);
-  const p2 = new Ponto(10, 10);
-  
-  p1.distancia; //undefined
-  p2.distancia; //undefined
-  
-  console.log(Ponto.distancia(p1, p2));
+
+  aumentar() {
+    this.aumentarVolume += valorAumentado()
+    return this.aumentarVolume
+  }
+
+  diminuir() {
+    this.aumentarVolume -= valorAumentado()
+    return this.aumentarVolume
+  }
+
+  static informações() {
+    console.log(this.nome + 'Infomações')// O metodo static n tem acesso ao dados inseridos no construtor
+  }
+}
+
+const controle = new ControleRemoto('LG')
+console.log(controle)
+// console.log(controle.informações()) <- A instancia não contem o método informações
+ControleRemoto.informações() // Chamamos o metodo na classe 
+

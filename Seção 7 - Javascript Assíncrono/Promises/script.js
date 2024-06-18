@@ -1,3 +1,5 @@
+
+
 const rand = (min, max) => {
     min *= 1000
     max *= 1000
@@ -21,7 +23,7 @@ esperaAi('conectando com o bd', rand(1, 4))
     })
     .then(resolve => {
         console.log(resolve)
-        return esperaAi(2, rand(1, 5))
+        return esperaAi('tratando dados', rand(1, 5))
     })
     .then(resolve => {
         console.log(resolve)
@@ -34,4 +36,4 @@ esperaAi('conectando com o bd', rand(1, 4))
         console.log(e)
     })
 
-console.log(typeof Promise)
+    console.log(typeof esperaAi)

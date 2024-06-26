@@ -21,12 +21,11 @@ const esperaAi = (msg, tempo) => {
     })
 }
 
-//.race
+//.race <- A primeira que executar ele retorna e para de rodar 
 const promises = [
     esperaAi('Primeira Promise', rand(1, 3)),
     esperaAi('Segunda Promise', rand(1, 3)),
     esperaAi('Terceira Promise', rand(1, 3)),
-    esperaAi(4, rand(1, 3)),
 ]
 
 Promise.race(promises)

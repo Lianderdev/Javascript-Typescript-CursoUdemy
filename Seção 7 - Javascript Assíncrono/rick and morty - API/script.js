@@ -18,13 +18,24 @@ const keys = ['name', 'status', 'species', 'gender', 'origin', 'episode']
 
 const buildResult = (result) => {
     return keys.map((key) => document.getElementById(key))
-        .map((elem) => {
-            if (elem.checked && typeof (result[elem.name]) !== 'object') {
-                const p = document.createElement('p')
-                p.innerHTML = `${elem.name}: ${result[elem.name]}`
-                content.appendChild(p)
-            }
-        })
+    .map((elemento) => {
+        
+        if (elemento.checked === true && elemento.name === 'origin') {
+            const p = document.createElement('p')
+            p.innerHTML = `${result[elemento.name].name}`
+            content.appendChild(p)
+        } else if (elemento.checked === true && (Array.isArray(result[elemento.name]))){
+            const array = result[elemento.name].join('\r\n')
+            const p = document.createElement('p')
+            p.innerHTML = `${elemento.name}: ${array}`
+            content.appendChild(p)
+        } else if (elemento.checked === true && (typeof(result[elemento.name] !== 'object'))) {
+            const p = document.createElement('p')
+            p.innerHTML = `${elemento.name}: ${result[elemento.name]}`
+            content.appendChild(p)
+            console.log(p)
+        }
+    })
 }
 
 

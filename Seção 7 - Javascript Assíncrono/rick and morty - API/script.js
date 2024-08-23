@@ -47,6 +47,7 @@ button.addEventListener('click', async (event) => {
     }
 
     const result = await fetchApi(character.value)
+    console.log(result)
 
     if(content.firstChild === null) {
         buildResult(result)

@@ -8,17 +8,25 @@ async function fetchApi(users) {
     return data
 }
 
-const build_result = (result) => {
-    return result.map((props) => {
-        const name = document.createElement('p')
-        name.innerHTML = props
-        content.appendChild(name)
+
+
+const build_result = (details) => {
+    const keys = ['id', 'login', 'html_url', 'name', 'bio']
+
+    return Object.entries(details).map(([chave, values]) => {
+        if (chave === keys[keys.indexOf(chave)]) {
+            const p = document.createElement('p')
+            p.innerHTML = `${chave}: ${values}`
+            content.appendChild(p)
+            console.log(keys[keys.indexOf(chave)])
+        }
     })
 }
+
 
 
 button_search.addEventListener('click', async (event) => {
     event.preventDefault()
     const result = await fetchApi(users.value)
-    build_result(Object.values(result))
+    build_result(result)
 })

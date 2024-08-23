@@ -7,3 +7,4 @@ async function fetchApi(users) {
 fetchApi('lianderDev').then((response => {
     console.log(Object.entries(response))
 }))
+

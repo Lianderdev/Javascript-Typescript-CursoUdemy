@@ -12,19 +12,17 @@ async function fetchApi(users) {
 
 const build_result = (details) => {
     const keys = ['id', 'login', 'html_url', 'name', 'bio']
+    console.log(details)
+    Object.entries(details).forEach(([key, value]) => {
 
-    return Object.entries(details).map(([chave, values]) => {
-        if (chave === keys[keys.indexOf(chave)]) {
+        if (keys.includes(key)) {
             const p = document.createElement('p')
-            p.innerHTML = `${chave}: ${values}`
+            p.innerHTML = `${key}: ${value}`
             content.appendChild(p)
-            console.log(keys[keys.indexOf(chave)])
         }
     })
 }
-
-
-
+ 
 button_search.addEventListener('click', async (event) => {
     event.preventDefault()
     const result = await fetchApi(users.value)
